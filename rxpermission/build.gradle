@@ -43,3 +43,14 @@ dependencies {
 }
 
 apply plugin: "com.vanniktech.maven.publish"
+
+mavenPublish {
+  targets {
+    uploadArchives {
+      releaseRepositoryUrl = "https://nexus.miquido.net/repository/android"
+      repositoryUsername = "USERNAME"
+      repositoryPassword = "PASSWORD"
+      signing = false
+    }
+  }
+}
