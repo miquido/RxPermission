@@ -174,7 +174,7 @@ public final class RealRxPermission implements RxPermission {
       final PublishSubject<Permission> subject = currentPermissionRequests.get(permissions[i]);
 
       if (subject == null) {
-        throw new IllegalStateException("RealRxPermission.onRequestPermissionsResult invoked but didn't find the corresponding permission request.");
+        continue;
       }
 
       currentPermissionRequests.remove(permissions[i]);
